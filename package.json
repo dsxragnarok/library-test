@@ -2,9 +2,18 @@
   "name": "library-test",
   "version": "1.0.0",
   "description": "A library test - using rollup and babel",
-  "main": "rollup.config.js",
+  "main": "lib/index.js",
+  "browser": "dist/index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "src"
+  ],
   "scripts": {
-    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:commonjs": "cross-env BABEL_ENV`commonjs babel src --out-dir lib",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
     "build:umd": "cross-env NODE_ENV=developement rollup -c -o dist/index.js",
     "build:umd:min": "cross-env NODE_ENV=production rollup -c -o dist/index.min.js",
@@ -14,7 +23,7 @@
     "type": "git",
     "url": "git+https://github.com/dsxragnarok/library-test.git"
   },
-  "author": "",
+  "author": "Kevin Phung",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dsxragnarok/library-test/issues"
