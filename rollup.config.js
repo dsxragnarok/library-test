@@ -11,7 +11,6 @@ var config = {
             jsnext: true
         }),
         babel({
-            plugins: ['external-helpers'],
             exclude: 'node_modules/**'
         })
     ]
