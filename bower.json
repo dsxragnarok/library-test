@@ -1,0 +1,14 @@
+{
+  "name": "library-test",
+  "description": "A library test - using rollup and babel",
+  "main": "lib/index.js",
+  "authors": [
+    "Kevin Phung"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/dsxragnarok/library-test",
+  "private": true,
+  "ignore": [
+    "src"
+  ]
+}
