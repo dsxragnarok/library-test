@@ -1,6 +1,6 @@
 {
   "name": "library-test",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A library test - using rollup and babel",
   "main": "lib/index.js",
   "browser": "dist/index.js",
@@ -14,8 +14,8 @@
   "scripts": {
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
-    "build:umd": "cross-env NODE_ENV=developement rollup -c -o dist/index.js",
-    "build:umd:min": "cross-env NODE_ENV=production rollup -c -o dist/index.min.js",
+    "build:umd": "cross-env BABEL_ENV=es NODE_ENV=developement rollup -c -o dist/index.js",
+    "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -o dist/index.min.js",
     "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min"
   },
   "repository": {
