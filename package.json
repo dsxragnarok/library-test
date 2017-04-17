@@ -9,8 +9,7 @@
   "files": [
     "dist",
     "lib",
-    "es",
-    "src"
+    "es"
   ],
   "scripts": {
     "build:commonjs": "cross-env BABEL_ENV`commonjs babel src --out-dir lib",
