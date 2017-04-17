@@ -9,6 +9,12 @@
   "homepage": "https://github.com/dsxragnarok/library-test",
   "private": true,
   "ignore": [
-    "src"
+    "*",
+    "!dist/",
+    "!dist/*",
+    "!lib/",
+    "!lib/*",
+    "!es/",
+    "!es/*"
   ]
 }
