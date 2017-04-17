@@ -4,50 +4,6 @@
 	(factory((global.libtest = global.libtest || {})));
 }(this, (function (exports) { 'use strict';
 
-var classCallCheck = function (instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-};
-
-var createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
-
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-
-
-
-
-
-
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
 var Character = function () {
     function Character(_ref) {
         var _ref$name = _ref.name,
@@ -56,7 +12,7 @@ var Character = function () {
             job = _ref$job === undefined ? 'hobo' : _ref$job,
             _ref$level = _ref.level,
             level = _ref$level === undefined ? 1 : _ref$level;
-        classCallCheck(this, Character);
+        babelHelpers.classCallCheck(this, Character);
 
         // initialize some stuff here and stuff
 
@@ -74,7 +30,7 @@ var Character = function () {
         this.level = level;
     }
 
-    createClass(Character, [{
+    babelHelpers.createClass(Character, [{
         key: 'setAttribute',
         value: function setAttribute(name, value) {
             this.attributes[name] = value;
@@ -102,7 +58,7 @@ function move(actor) {
     var y = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
     var position = actor.position;
 
-    return _extends({}, actor, {
+    return babelHelpers.extends({}, actor, {
         position: {
             x: position.x + x,
             y: position.y + y
